@@ -1,0 +1,35 @@
+int TRIG = 10;     
+int ECO = 9;        
+int LED = 8;        
+long DURACION;       
+int DISTANCIA;       
+
+void setup() {
+  pinMode(TRIG, OUTPUT);
+  pinMode(ECO, INPUT);
+  pinMode(LED, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  // Enviar pulso ultrasónico
+  digitalWrite(TRIG, HIGH);
+  delayMicroseconds(10);  
+  digitalWrite(TRIG, LOW);
+
+  // Recibir duración del eco
+  DURACION = pulseIn(ECO, HIGH);
+
+  // Calcular distancia en cm
+  DISTANCIA = DURACION / 58.2;
+
+  Serial.println(DISTANCIA);
+  delay(200);
+
+  // Encender LED si está a 20cm o menos
+  if (DISTANCIA <= 20 && DISTANCIA >= 0) {
+    digitalWrite(LED, HIGH);
+  } else {
+    digitalWrite(LED, LOW);
+  }
+}
