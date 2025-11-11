@@ -16,3 +16,6 @@
 
 #ejercicio 7
 ![Imagen de WhatsApp 2025-09-29 a las 10 39 15_5dbefc85](https://github.com/user-attachments/assets/5556bbcb-88ac-47ec-a65a-60f64d7ee6c8)
+
+#trabajo Final
+<img width="317" height="418" alt="image" src="https://github.com/user-attachments/assets/9c46bdaa-1c69-42ec-b3e1-3e9c81c77b67" />
